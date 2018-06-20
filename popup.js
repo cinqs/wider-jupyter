@@ -9,10 +9,13 @@ wideIt.onclick = function(element) {
     if(wide){
       chrome.tabs.executeScript(tabs[0].id, {code: 'document.getElementById("notebook-container").classList.add("container-fluid")'})
       chrome.tabs.executeScript(tabs[0].id, {code: 'document.getElementById("notebook-container").classList.remove("container")'})
+      chrome.tabs.executeScript(tabs[0].id, {code: 'document.getElementById("terminado-container").classList.add("container-fluid")'})
+      chrome.tabs.executeScript(tabs[0].id, {code: 'document.getElementById("terminado-container").classList.remove("container")'})
     } else {
       chrome.tabs.executeScript(tabs[0].id, {code: 'document.getElementById("notebook-container").classList.add("container")'})
       chrome.tabs.executeScript(tabs[0].id, {code: 'document.getElementById("notebook-container").classList.remove("container-fluid")'})
+      chrome.tabs.executeScript(tabs[0].id, {code: 'document.getElementById("terminado-container").classList.add("container")'})
+      chrome.tabs.executeScript(tabs[0].id, {code: 'document.getElementById("terminado-container").classList.remove("container-fluid")'})
     }
-
   });
 };
